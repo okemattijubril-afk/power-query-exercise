@@ -27,3 +27,4 @@ Source: 1_Badly-Structured-Sales-Data.xlsx
 4. unpivoted the other columns, then split the attribute column by comma into Ship Mode and Segment.
 5. Renamed the columns and set the data types (Order Date to Date, Sales to decimal).
 6. Loaded the cleaned table.
+Result: 822 rows, 4 column (Ship Mode, segment, Order Date, sales).
