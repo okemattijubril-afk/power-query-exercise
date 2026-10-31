@@ -22,9 +22,17 @@ Tool: Power BI Desktop (Power query)
 Source: 1_Badly-Structured-Sales-Data.xlsx
 
 1. Loaded the Dirty 1 sheet and transposed it.
-2. Filled down the Ship Mode row, merged it with Segment, then transposed back.
-3. Promoted the first row to headers and removed the extra row.
-4. unpivoted the other columns, then split the attribute column by comma into Ship Mode and Segment.
-5. Renamed the columns and set the data types (Order Date to Date, Sales to decimal).
-6. Loaded the cleaned table.
+2. Filled down the Ship Mode row, merged it with Segment, then transposed back. 
+4. Promoted the first row to headers and removed the extra row.
+5. unpivoted the other columns, then split the attribute column by comma into Ship Mode and Segment.
+6. Renamed the columns and set the data types (Order Date to Date, Sales to decimal).
+7. Loaded the cleaned table.
 Result: 822 rows, 4 column (Ship Mode, segment, Order Date, sales).
+
+### Exercise 3: Jumbled Customer Details Data Extraction
+* **File:** `3.Jumbled-up-Customers-Details.xlsx` (Query: `Dim_Customer_Details`)
+* **Objective:** Extract unstructured, single-string text records into normalized dimension columns.
+* **Key Transformations:**
+  * Header demotion (`Use Headers as First Row`) to preserve Row 1 data.
+  * Delimiter-based text extraction (`Text Between Delimiters` & `Text After Delimiter`) for `Name`, `Address`, `Age`, and `Gender`.
+  * Data type coercion (`Age` to Whole Number) and original column cleanup. 
