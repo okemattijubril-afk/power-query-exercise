@@ -35,4 +35,37 @@ Result: 822 rows, 4 column (Ship Mode, segment, Order Date, sales).
 * **Key Transformations:**
   * Header demotion (`Use Headers as First Row`) to preserve Row 1 data.
   * Delimiter-based text extraction (`Text Between Delimiters` & `Text After Delimiter`) for `Name`, `Address`, `Age`, and `Gender`.
-  * Data type coercion (`Age` to Whole Number) and original column cleanup. 
+  * Data type coercion (`Age` to Whole Number) and original column cleanup.
+ 
+    ## Exercise 4: Superstore_StarSchema_Model
+     # Power BI Data Modeling & Transformation Portfolio
+
+## Project Overview
+This repository showcases end-to-end data preparation, cleaning, and Star Schema modeling using **Power BI Desktop** and **Power Query**. The exercises demonstrate best practices in ETL (Extract, Transform, Load), data normalization, and relationship management for analytics readiness.
+
+### 1. `Superstore_StarSchema_Model.pbix`
+* **Description:** Complete Power BI data model built from transactional retail data.
+* **Architecture:** Star Schema design featuring a central Fact table surrounded by single-direction 1-to-many ($1:*$) dimension relationships.
+* **Tables:**
+  * **`Orders` (Fact):** Contains transactional metrics (`Sales`, `Quantity`, `Discount`, `Profit`) and key references.
+  * **`Dim_Customer`:** Cleaned dimension containing unique customer profiles (`Customer ID`, `Customer Name`, `Segment`).
+  * **`Dim_Product`:** Product details categorized by `Category` and `Sub-Category`.
+  * **`Dim_Location`:** Geographic dimension mapped by `Postal Code`, `City`, `State`, and `Region`.
+
+### 2. `Clean_Customer_Details.xlsx`
+* **Description:** Processed customer directory parsed from unformatted, single-string raw text (`Dirty 3`).
+* **Transformations Applied:**
+  * Header demotion and custom string parsing using text delimiters (`Name`, `Address`, `Age`, `Gender`).
+  * Data type assignment and removal of original unstructured attributes.
+  * Staged into the query model as **`Dim_Customer_Details`**.
+
+### 3. `8. Add Columns.xlsx`
+* **Description:** Exercise dataset practicing advanced Power Query column creation techniques.
+* **Key Workflows:**
+  * **General & Data Types:** Formatting, casing, and primitive conversions.
+  * **Conditional Columns:** Rule-based categorization and logic branching.
+  * **Custom Columns:** Advanced M-code calculations and custom field generation.
+
+## 🛠️ Tools & Technologies Used
+* **Power BI Desktop:** Model view configuration, relationship cardinality setup.
+* **Power Query Editor:** M-code transformations, string extraction, table duplication, deduplication, and data type coercion.
