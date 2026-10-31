@@ -69,3 +69,27 @@ This repository showcases end-to-end data preparation, cleaning, and Star Schema
 ## 🛠️ Tools & Technologies Used
 * **Power BI Desktop:** Model view configuration, relationship cardinality setup.
 * **Power Query Editor:** M-code transformations, string extraction, table duplication, deduplication, and data type coercion.
+
+  
+1. Loaded the Transactions and Cities sheets.
+2. Promoted the first row of Cities to headers.
+3. Merged Transactions with Cities on City using a Left Outer join.
+4. Expanded the Cities column to bring in State and Region.
+5. Loaded only the merged table, Transactions with Region.
+
+Result: 23 rows, 9 columns (State and Region added).
+
+## Exercise 5: Transpose Data
+
+Tool: Power BI Desktop (Power Query)
+
+Source: 4__Transpose_Data_2.xlsx
+
+1. Loaded the Transpose sheet.
+2. Removed the automatic Promoted Headers and Changed Type steps.
+3. Transposed the table so the fields became columns.
+4. Used the first row as headers.
+5. Set data types (Sales, Discount and Profit to decimal, Quantity to whole number).
+6. Renamed the query Transposed Products and loaded it.
+
+Result: 18 rows, 6 columns (Product Name, Product Category, Sales, Quantity, Discount, Profit).
